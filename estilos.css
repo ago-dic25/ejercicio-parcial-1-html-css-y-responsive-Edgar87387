@@ -26,8 +26,15 @@
   margin-top: 15px;
 }
 
-tarjeta p{
+.tarjeta p{
   flex-grow: 1;
 }
 
+.header {
+  background-color: lightblue;
+}
+
+.cards{
+  background-color: #4169E1;
+}
 
