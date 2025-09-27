@@ -1,43 +1,132 @@
-.cards{
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.tarjeta{
-  flex: 1;
-  background-color: #f1f1f1;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.tarjeta img{
-  width: 100%;
-  height: auto;
-  border-radius: 20px ;
-}
-
-.tarjeta h3{
-  margin-top: 15px;
-}
-
-.tarjeta p{
-  flex-grow: 1;
-}
 
 .header {
-  background-color: lightblue;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
 }
 
-.cards{
-  background-color: #4169E1;
+.header h2 {
+    margin: 0;
+    font-size: 2em;
 }
 
-.Main{
-  background-color: skyblue;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.main {
+    background-color: skyblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 2em;
+}
+
+.main small {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.main p {
+    margin-top: 20px;
+}
+
+.main img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #4169E1;
+}
+
+.tarjeta {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); 
+    margin-bottom: 20px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.tarjeta h3 {
+    margin-top: 15px;
+}
+
+.tarjeta p {
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+
+@media (max-width: 767px) {
+    .tarjeta {
+        flex: 1 1 100%; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .tarjeta {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main img {
+        width: 45%; 
+    }
+
+    .tarjeta {
+        flex: 1 1 calc(33.333% - 20px); 
+    }
 }
